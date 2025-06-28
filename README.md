@@ -1,6 +1,6 @@
 # Bridgelabz SIPP Training
 
-This repository contains my work from the Bridgelabz Self-Improvement Programming Practice (SIPP) training.
+This repository contains my work from the Bridgelabz Summer Placement Programming Practice (SIPP) training.
 
 ## Week 1
 
