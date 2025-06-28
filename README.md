@@ -2,8 +2,6 @@
 
 This repository contains my work from the Bridgelabz Summer Placement Programming Practice (SIPP) training.
 
-## Week 1
-
 ### Core Java Programming
 
 This section covers fundamental Java concepts with exercises of varying difficulty levels.
