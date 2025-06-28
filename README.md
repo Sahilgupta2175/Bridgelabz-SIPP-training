@@ -97,11 +97,11 @@ graph TD
 <summary><b>🔄 Array Operations & Data Structures</b></summary>
 
 ### 📊 Array Fundamentals
-| 🎯 Topic | 📝 Description | 🔗 Source Code | 📋 Concepts Covered |
-|----------|----------------|----------------|---------------------|
-| **Basic Arrays** | Fundamental array operations and manipulations | [📁 Array Exercises](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Array) | Array declaration, initialization, traversal |
-| **Java Arrays Level 1** | Beginner-friendly array problems | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Arrays/Level-1) | Basic operations, searching, simple algorithms |
-| **Java Arrays Level 2** | Advanced array manipulations and algorithms | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Arrays/Level-2) | Sorting, complex operations, optimization |
+| 🎯 Topic | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Basic Arrays** | Fundamental array operations and manipulations | [📁 Array Exercises](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Array) |
+| **Java Arrays Level 1** | Beginner-friendly array problems | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Arrays/Level-1) |
+| **Java Arrays Level 2** | Advanced array manipulations and algorithms | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Arrays/Level-2) |
 
 **🎓 Learning Outcomes**: Master array fundamentals, understand memory management, implement efficient algorithms
 
@@ -111,10 +111,10 @@ graph TD
 <summary><b>🔧 Built-in Functions & Core Libraries</b></summary>
 
 ### 🛠️ Java Built-in Functions
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 Skills Developed |
-|----------|----------------|----------------|---------------------|
-| **Level 1** | Basic built-in function exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Built-in-Function-practice/level-1) | Math functions, String methods |
-| **Level 2** | Advanced built-in function challenges | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Built-in-Function-practice/level-2) | Collections, Advanced APIs |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Basic built-in function exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Built-in-Function-practice/level-1) |
+| **Level 2** | Advanced built-in function challenges | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Built-in-Function-practice/level-2) |
 
 **🎓 Learning Outcomes**: Leverage Java's extensive library, understand API documentation, efficient coding practices
 
@@ -124,12 +124,12 @@ graph TD
 <summary><b>🔀 Control Flow & Decision Making</b></summary>
 
 ### 🌊 Flow Control Mastery
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 Concepts |
-|----------|----------------|----------------|-------------|
-| **Level 1** | Basic control flow exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-1) | if-else, basic loops |
-| **Level 2** | Intermediate control flow problems | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-2) | nested loops, switch statements |
-| **Level 3** | Advanced control flow challenges | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-3) | complex algorithms, optimization |
-| **Extra Practice** | Additional control flow exercises | [📁 Additional](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/control-flows) | Real-world scenarios |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Basic control flow exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-1) |
+| **Level 2** | Intermediate control flow problems | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-2) |
+| **Level 3** | Advanced control flow challenges | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Control-Flows/Level-3) |
+| **Extra Practice** | Additional control flow exercises | [📁 Additional](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/control-flows) |
 
 **🎓 Learning Outcomes**: Master program flow control, implement complex logic, optimize algorithm efficiency
 
@@ -139,12 +139,12 @@ graph TD
 <summary><b>⚙️ Methods & Function Design</b></summary>
 
 ### 🔧 Method Engineering
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 Focus Areas |
-|----------|----------------|----------------|----------------|
-| **Level 1** | Basic method exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-1) | Method syntax, parameters |
-| **Level 2** | Intermediate method problems | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-2) | Return types, overloading |
-| **Level 3** | Advanced method concepts | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-3) | Recursion, complex algorithms |
-| **Additional Methods** | Extended method practice | [📁 More Methods](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Methods) | Design patterns, best practices |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Basic method exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-1) |
+| **Level 2** | Intermediate method problems | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-2) |
+| **Level 3** | Advanced method concepts | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Methods/Level-3) |
+| **Additional Methods** | Extended method practice | [📁 More Methods](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Methods) |
 
 **🎓 Learning Outcomes**: Write modular code, understand method design principles, implement recursive solutions
 
@@ -154,13 +154,13 @@ graph TD
 <summary><b>📝 String Manipulation & Text Processing</b></summary>
 
 ### 🔤 String Mastery
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 Key Skills |
-|----------|----------------|----------------|---------------|
-| **Level 1** | Basic string operations | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-1) | String basics, concatenation |
-| **Level 2** | Intermediate string manipulations | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-2) | String methods, parsing |
-| **Level 3** | Advanced string processing | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-3) | Regular expressions, performance |
-| **Extra Challenges** | Complex string problems | [📁 Extra Questions](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Extra-Questions) | Algorithm challenges |
-| **Additional Practice** | More string exercises | [📁 String Extras](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Strings) | Real-world applications |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Basic string operations | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-1) |
+| **Level 2** | Intermediate string manipulations | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-2) |
+| **Level 3** | Advanced string processing | [📁 Level 3](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Level-3) |
+| **Extra Challenges** | Complex string problems | [📁 Extra Questions](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Strings/Extra-Questions) |
+| **Additional Practice** | More string exercises | [📁 String Extras](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Strings) |
 
 **🎓 Learning Outcomes**: Master text processing, understand string immutability, implement efficient string algorithms
 
@@ -170,11 +170,11 @@ graph TD
 <summary><b>🌱 Programming Fundamentals & Core Concepts</b></summary>
 
 ### 💻 Foundation Building
-| 🎯 Category | 📝 Description | 🔗 Source Code | 🎯 Core Skills |
-|-------------|----------------|----------------|----------------|
-| **Programming Elements** | Core Java programming concepts | [📁 Java Fundamentals](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Programming-Elements) | Variables, data types, operators |
-| **Level 1 Practice** | Basic programming exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/level-1) | Problem-solving basics |
-| **Level 2 Practice** | Intermediate programming challenges | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/level-2) | Complex problem solving |
+| 🎯 Category | 📝 Description | 🔗 Source Code |
+|-------------|----------------|----------------|
+| **Programming Elements** | Core Java programming concepts | [📁 Java Fundamentals](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/Java-Programming-Elements) |
+| **Level 1 Practice** | Basic programming exercises | [📁 Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/level-1) |
+| **Level 2 Practice** | Intermediate programming challenges | [📁 Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/core-java-programming/level-2) |
 
 **🎓 Learning Outcomes**: Build strong programming foundation, develop problem-solving mindset, understand Java syntax thoroughly
 
@@ -191,9 +191,9 @@ graph TD
 <summary><b>� Constructors & Object Creation</b></summary>
 
 ### 🏗️ Constructor Mastery
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 Key Concepts |
-|----------|----------------|----------------|-----------------|
-| **Level 1** | Java constructors, instance vs. class variables | [📁 Constructors L1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/Constructors/Level-1) | Default constructors, parameterized constructors |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Java constructors, instance vs. class variables | [📁 Constructors L1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/Constructors/Level-1) |
 
 **🎓 Learning Outcomes**: 
 - ✅ Understand object initialization
@@ -207,10 +207,10 @@ graph TD
 <summary><b>🧩 Core OOP Concepts</b></summary>
 
 ### 🎯 OOP Fundamentals
-| 🎯 Level | 📝 Description | 🔗 Source Code | 🎯 OOP Pillars |
-|----------|----------------|----------------|-----------------|
-| **Level 1** | Fundamental OOP concepts (classes, objects) | [📁 OOP Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/OOPS/Level-1) | Encapsulation, basic class design |
-| **Level 2** | Advanced OOP concepts | [📁 OOP Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/OOPS/Level-2) | Inheritance, Polymorphism, Abstraction |
+| 🎯 Level | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Level 1** | Fundamental OOP concepts (classes, objects) | [📁 OOP Level 1](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/OOPS/Level-1) |
+| **Level 2** | Advanced OOP concepts | [📁 OOP Level 2](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/OOPS/Level-2) |
 
 **🎓 Learning Outcomes**: 
 - ✅ Master the four pillars of OOP
@@ -224,9 +224,9 @@ graph TD
 <summary><b>🔑 Keywords and Modifiers</b></summary>
 
 ### 🔧 Java Keywords Mastery
-| 🎯 Topic | 📝 Description | 🔗 Source Code | 🎯 Focus Areas |
-|----------|----------------|----------------|----------------|
-| **Static, this, final** | Essential Java keywords and scope management | [📁 Keywords](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/Static-find-this) | Static members, this reference, final variables |
+| 🎯 Topic | 📝 Description | 🔗 Source Code |
+|----------|----------------|----------------|
+| **Static, this, final** | Essential Java keywords and scope management | [📁 Keywords](https://github.com/Sahilgupta2175/Bridgelabz-SIPP-training/tree/oops/Static-find-this) |
 
 **🎓 Learning Outcomes**: 
 - ✅ Understand static vs instance members
@@ -490,22 +490,6 @@ git push origin feature/your-improvement
 - 📺 [Bridgelabz YouTube](https://www.youtube.com/c/BridgeLabz)
 - 🐦 [Follow on Twitter](https://twitter.com/bridgelabz)
 - 📧 [Contact Bridgelabz](https://bridgelabz.com/contact)
-
----
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-### 📋 **License Summary**
-- ✅ **Commercial Use**: Allowed for commercial purposes
-- ✅ **Modification**: You can modify the code
-- ✅ **Distribution**: You can distribute the code
-- ✅ **Private Use**: Allowed for private use
-- ❗ **License Inclusion**: Must include original license
-- 🚫 **Liability**: No warranty provided
-
-📖 **Full License**: [View MIT License](LICENSE)
 
 ---
 
