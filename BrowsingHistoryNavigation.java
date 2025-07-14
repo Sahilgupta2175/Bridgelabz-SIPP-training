@@ -1,13 +1,3 @@
-/*
-Scenario 1: Browser History Navigation
-Use Case: Maintain a user’s browsing history with the ability to move back and forth.
-Why LinkedList? Doubly linked list makes it easy to navigate both backward and forward.
-OOP Concepts:
-● Encapsulation: Browser history data is wrapped inside a class.
-● Abstraction: Navigation methods hide internal implementation.
-● Inheritance & Polymorphism: Reusable navigation for other apps like music players.
-*/
-
 public class BrowsingHistoryNavigation {
     public static class HistoryNode {
         String url;
