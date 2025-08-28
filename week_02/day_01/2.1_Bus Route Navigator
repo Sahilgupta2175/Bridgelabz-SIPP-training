@@ -1,0 +1,109 @@
+CLASS Node
+    ATTRIBUTES:
+        stopName
+        next
+    CONSTRUCTOR(stopName)
+        this.stopName = stopName
+        this.next = NULL
+    END CONSTRUCTOR
+END CLASS
+
+
+CLASS BusRoute
+    ATTRIBUTES:
+        head
+
+    CONSTRUCTOR()
+        head = NULL
+    END CONSTRUCTOR
+
+    METHOD addStop(stopName)
+        newNode = Node(stopName)
+        IF head == NULL THEN
+            head = newNode
+        ELSE
+            temp = head
+            WHILE temp.next != NULL
+                temp = temp.next
+            END WHILE
+            temp.next = newNode
+        ENDIF
+    END METHOD
+
+    METHOD insertAfter(targetStop, newStop)
+        temp = head
+        WHILE temp != NULL
+            IF temp.stopName == targetStop THEN
+                newNode = Node(newStop)
+                newNode.next = temp.next
+                temp.next = newNode
+                PRINT "Inserted stop: " + newStop + " after " + targetStop
+                RETURN
+            ENDIF
+            temp = temp.next
+        END WHILE
+        PRINT "Target stop not found."
+    END METHOD
+
+    METHOD removeStop(stopName)
+        temp = head
+        prev = NULL
+        WHILE temp != NULL
+            IF temp.stopName == stopName THEN
+                IF prev == NULL THEN
+                    head = temp.next
+                ELSE
+                    prev.next = temp.next
+                ENDIF
+                PRINT "Removed stop: " + stopName
+                RETURN
+            ENDIF
+            prev = temp
+            temp = temp.next
+        END WHILE
+        PRINT "Stop not found."
+    END METHOD
+
+    METHOD searchStop(stopName)
+        temp = head
+        WHILE temp != NULL
+            IF temp.stopName == stopName THEN
+                PRINT "Stop " + stopName + " found in the route."
+                RETURN TRUE
+            ENDIF
+            temp = temp.next
+        END WHILE
+        PRINT "Stop " + stopName + " not found."
+        RETURN FALSE
+    END METHOD
+
+    METHOD displayRoute()
+        temp = head
+        PRINT "Bus Route: "
+        WHILE temp != NULL
+            PRINT temp.stopName + " → "
+            temp = temp.next
+        END WHILE
+        PRINT "END"
+    END METHOD
+END CLASS
+
+
+CLASS MAIN
+    route = BusRoute()
+    route.addStop("Depot")
+    route.addStop("Main Street")
+    route.addStop("City Mall")
+    route.addStop("Hospital")
+    route.addStop("Airport")
+
+    route.displayRoute()
+
+    route.insertAfter("City Mall", "University")
+    route.displayRoute()
+
+    route.removeStop("Hospital")
+    route.displayRoute()
+
+    route.searchStop("Airport")
+END CLASS
