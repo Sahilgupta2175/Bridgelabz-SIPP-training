@@ -1,0 +1,8 @@
+Start
+Input: Customer details, Restaurant details, DeliveryBoy details
+Create Customer object
+Create Restaurant object
+Create DeliveryBoy object
+Create Order object containing Customer, Restaurant, and DeliveryBoy objects
+Display Order details
+End
