@@ -1,0 +1,8 @@
+Start
+Input: List of courses and student enrollments
+Create Map<Course, List<Student>>
+For each student enrollment
+    Add student to corresponding course list in map
+For each course in map
+    Display course name and list of enrolled students
+End
