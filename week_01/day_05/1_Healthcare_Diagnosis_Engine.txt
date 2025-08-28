@@ -1,0 +1,15 @@
+Start
+1. Define interface DiagnosisStrategy with method diagnose(symptoms).
+2. Implement strategies:
+   - RuleBasedDiagnosis: Match symptoms with fixed rules.
+   - AIBasedDiagnosis: Predict diseases using AI logic.
+   - ProbabilityBasedDiagnosis: Suggest diseases with probability scores.
+3. Create DiagnosisContext class:
+   - Has a DiagnosisStrategy field.
+   - Method setStrategy(strategy).
+   - Method executeDiagnosis(symptoms) → delegates to strategy.diagnose().
+4. Example:
+   - General Medicine: RuleBasedDiagnosis.
+   - Neurology: AIBasedDiagnosis.
+5. New strategy (GeneticPatternDiagnosis) can be added without touching old code.
+End
