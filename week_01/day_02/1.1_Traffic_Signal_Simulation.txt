@@ -1,0 +1,27 @@
+Start
+Define enum TrafficLight
+    Values: RED, GREEN, YELLOW
+End enum
+
+Define class TrafficSignal
+    Attribute: currentLight (TrafficLight)
+    Constructor()
+        Set currentLight = RED
+    Method changeLight()
+        If currentLight == RED
+            Set currentLight = GREEN
+        Else if currentLight == GREEN
+            Set currentLight = YELLOW
+        Else if currentLight == YELLOW
+            Set currentLight = RED
+    Method displayLight()
+        Print "Current Light: " + currentLight
+End class
+
+Main
+    Create TrafficSignal signal
+    Loop 5 times
+        Call signal.displayLight()
+        Wait 2 seconds
+        Call signal.changeLight()
+End
