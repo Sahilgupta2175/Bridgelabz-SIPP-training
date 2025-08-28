@@ -1,0 +1,33 @@
+CLASS Student
+    ATTRIBUTES:
+        name
+        marks
+END CLASS
+
+CLASS RankList
+    METHOD mergeSort(list)
+        IF length(list) <= 1 THEN
+            RETURN list
+        ENDIF
+        mid = length(list) / 2
+        left = mergeSort(list[0..mid])
+        right = mergeSort(list[mid+1..end])
+        RETURN merge(left, right)
+    END METHOD
+
+    METHOD merge(left, right)
+        result = []
+        WHILE left NOT EMPTY AND right NOT EMPTY
+            IF left[0].marks > right[0].marks THEN
+                result.add(left.removeFirst())
+            ELSE IF left[0].marks == right[0].marks AND left[0].name < right[0].name THEN
+                result.add(left.removeFirst())
+            ELSE
+                result.add(right.removeFirst())
+            ENDIF
+        ENDWHILE
+        result.addAll(left)
+        result.addAll(right)
+        RETURN result
+    END METHOD
+END CLASS
