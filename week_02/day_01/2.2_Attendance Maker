@@ -1,0 +1,65 @@
+CLASS AttendanceSystem
+    ATTRIBUTES:
+        students     # number of students
+        days         # number of days in month
+        records[][]  # 2D array [students][days]
+
+    CONSTRUCTOR(students, days)
+        this.students = students
+        this.days = days
+        CREATE records[students][days]
+        INITIALIZE all cells as 'A'
+    END CONSTRUCTOR
+
+    METHOD markAttendance(studentID, day, status)
+        IF studentID < students AND day <= days THEN
+            records[studentID][day-1] = status   # 'P' or 'A'
+            PRINT "Marked Student " + studentID + " on Day " + day + " as " + status
+        ELSE
+            PRINT "Invalid student ID or day."
+        ENDIF
+    END METHOD
+
+    METHOD updateAttendance(studentID, day, newStatus)
+        IF studentID < students AND day <= days THEN
+            records[studentID][day-1] = newStatus
+            PRINT "Updated Student " + studentID + " on Day " + day + " to " + newStatus
+        ELSE
+            PRINT "Invalid update request."
+        ENDIF
+    END METHOD
+
+    METHOD generateReport(studentID)
+        IF studentID < students THEN
+            presentCount = 0
+            FOR day = 0 TO days-1
+                IF records[studentID][day] == 'P' THEN
+                    presentCount++
+                ENDIF
+            END FOR
+            PRINT "Student " + studentID + " Monthly Report: " + presentCount + " days present out of " + days
+        ELSE
+            PRINT "Invalid student ID."
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS MAIN
+    system = AttendanceSystem(5, 30)   # 5 students, 30 days
+
+    # Mark sample attendance for Student 1 (index 0)
+    system.markAttendance(0, 1, 'P')
+    system.markAttendance(0, 2, 'P')
+    system.markAttendance(0, 3, 'A')
+    system.markAttendance(0, 4, 'P')
+    system.markAttendance(0, 5, 'P')
+    system.markAttendance(0, 6, 'P')
+    system.markAttendance(0, 7, 'A')
+
+    # Teacher updates Day 3
+    system.updateAttendance(0, 3, 'P')
+
+    # Generate report for Student 1
+    system.generateReport(0)
+END CLASS
