@@ -1,0 +1,36 @@
+Start
+Define abstract class Crop
+    Attributes: name
+    Constructor(name)
+        Set this.name = name
+    Abstract Method waterRequirement()
+    Abstract Method harvest()
+End class
+
+Define class Rice extends Crop
+    Constructor(name)
+        Call super(name)
+    Method waterRequirement()
+        Print name + " requires high water."
+    Method harvest()
+        Print name + " harvested in 120 days."
+End class
+
+Define class Wheat extends Crop
+    Constructor(name)
+        Call super(name)
+    Method waterRequirement()
+        Print name + " requires moderate water."
+    Method harvest()
+        Print name + " harvested in 90 days."
+End class
+
+Main
+    Create Rice("Basmati")
+    Call waterRequirement()
+    Call harvest()
+
+    Create Wheat("Durum")
+    Call waterRequirement()
+    Call harvest()
+End
