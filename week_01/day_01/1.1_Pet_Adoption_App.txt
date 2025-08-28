@@ -1,0 +1,46 @@
+Start
+Define class Pet
+    Attributes: name, age
+    Constructor(name, age)
+        Set this.name = name
+        Set this.age = age
+    Method displayInfo()
+        Print name + " - " + age + " years old
+End class
+
+Define class Dog extends Pet
+    Attribute: breed
+    Constructor(name, age, breed)
+        Call super(name, age)
+        Set this.breed = breed
+    Method displayInfo()
+        Call super.displayInfo()
+        Print "Breed: " + breed
+End class
+
+Define class Cat extends Pet
+    Attribute: color
+    Constructor(name, age, color)
+        Call super(name, age)
+        Set this.color = color
+    Method displayInfo()
+        Call super.displayInfo()
+        Print "Color: " + color
+End class
+
+Define class Bird extends Pet
+    Attribute: species
+    Constructor(name, age, species)
+        Call super(name, age)
+        Set this.species = species
+    Method displayInfo()
+        Call super.displayInfo()
+        Print "Species: " + species
+End class
+
+Main
+    Create Dog("Buddy", 3, "Labrador")
+    Create Cat("Whiskers", 2, "White")
+    Create Bird("Chirpy", 1, "Parrot")
+    Call displayInfo() for each pet
+End
