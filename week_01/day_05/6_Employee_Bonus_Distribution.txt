@@ -1,0 +1,16 @@
+Start
+1. Input: List<Employee>
+   Each Employee has: Name, Department, Rating, Salary
+2. Process using Streams:
+   - Group employees by department.
+   - Calculate department salary total.
+   - Bonus pool = 10% of department salary.
+3. Distribute bonus proportionally based on rating.
+   - Higher rating → higher share of pool.
+4. Example:
+   - IT Department salary = 10,00,000 → Bonus pool = 1,00,000
+   - Emp-A (rating 5) → 50,000
+   - Emp-B (rating 3) → 30,000
+   - Emp-C (rating 2) → 20,000
+5. Output: Department-wise bonus distribution report.
+End
