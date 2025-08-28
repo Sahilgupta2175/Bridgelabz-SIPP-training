@@ -1,0 +1,46 @@
+CLASS Course
+    ATTRIBUTES:
+        title
+        duration
+        price
+END CLASS
+
+CLASS Student
+    ATTRIBUTES:
+        name
+        email
+        enrolledCourses = List<Course>()
+
+    METHOD enrollCourse(course)
+        IF course NOT IN enrolledCourses THEN
+            enrolledCourses.add(course)
+            PRINT name + " enrolled in " + course.title
+        ELSE
+            PRINT "Already enrolled in " + course.title
+        ENDIF
+    END METHOD
+
+    METHOD viewEnrolledCourses()
+        PRINT name + "'s Enrolled Courses:"
+        FOR EACH c IN enrolledCourses
+            PRINT c.title + " - " + c.duration + " - ₹" + c.price
+        ENDFOR
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    java = Course("Java Programming Basics", "6 weeks", 4999)
+    dsa = Course("Data Structures in Java", "8 weeks", 5999)
+    spring = Course("Spring Boot for Web Development", "10 weeks", 6999)
+
+    amit = Student("Amit", "amit@mail.com")
+    priya = Student("Priya", "priya@mail.com")
+
+    amit.enrollCourse(java)
+    amit.enrollCourse(dsa)
+    priya.enrollCourse(spring)
+    priya.enrollCourse(java)
+
+    amit.viewEnrolledCourses()
+    priya.viewEnrolledCourses()
+END CLASS
