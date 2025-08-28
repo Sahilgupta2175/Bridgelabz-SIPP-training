@@ -1,0 +1,22 @@
+Start
+Initialize stack as empty Stack
+
+Function typeText(text)
+    Push text into stack
+End function
+
+Function undo()
+    If stack is not empty
+        Pop last action from stack
+        Print "Reverted last change"
+    Else
+        Print "Nothing to undo"
+End function
+
+Main
+    typeText("Hello")
+    typeText("Hello World")
+    undo()
+    undo()
+    undo()
+End
