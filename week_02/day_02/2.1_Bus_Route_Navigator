@@ -1,0 +1,38 @@
+CLASS BusRoute
+    ATTRIBUTES:
+        LinkedList route
+
+    METHOD addStop(stop)
+        route.insert(stop)
+    END METHOD
+
+    METHOD removeStop(stop)
+        route.delete(stop)
+    END METHOD
+
+    METHOD searchStop(stop)
+        IF route.contains(stop) THEN
+            PRINT stop + " is in the route."
+        ELSE
+            PRINT stop + " is not in the route."
+        ENDIF
+    END METHOD
+
+    METHOD displayRoute()
+        PRINT route
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    busRoute = BusRoute()
+    busRoute.addStop("Depot")
+    busRoute.addStop("Main Street")
+    busRoute.addStop("City Mall")
+    busRoute.addStop("Hospital")
+    busRoute.addStop("Airport")
+
+    busRoute.addStop("University")   
+    busRoute.removeStop("Hospital")  
+    busRoute.searchStop("Airport")   
+    busRoute.displayRoute()
+END CLASS
