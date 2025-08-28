@@ -1,0 +1,7 @@
+Start
+Interface: Searchable -> method search(criteria)
+Interface: Printable -> method print()
+Classes implement Searchable and Printable for different report types (e.g., LabReport, Prescription)
+Create objects of different report types
+Use polymorphism to search and print reports
+End
