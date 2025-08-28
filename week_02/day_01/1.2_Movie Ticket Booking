@@ -1,0 +1,118 @@
+CLASS Ticket
+    PRIVATE ATTRIBUTES:
+        movieName
+        seatNumber
+        price
+        isBooked
+
+    CONSTRUCTOR(movieName, seatNumber, price)
+        SET this.movieName = movieName
+        SET this.seatNumber = seatNumber
+        SET this.price = price
+        SET isBooked = TRUE
+    END CONSTRUCTOR
+
+    METHOD cancel()
+        IF isBooked == TRUE THEN
+            isBooked = FALSE
+            PRINT "Ticket for " + movieName + " seat " + seatNumber + " has been cancelled."
+        ELSE
+            PRINT "Ticket already cancelled or not booked."
+        ENDIF
+    END METHOD
+
+    METHOD getDetails()
+        RETURN "Movie: " + movieName + ", Seat: " + seatNumber + ", Price: " + price + ", Status: " + (isBooked ? "Booked" : "Cancelled")
+    END METHOD
+END CLASS
+
+
+CLASS Theatre
+    PRIVATE ATTRIBUTES:
+        theatreName
+        movieSchedule   # Dictionary {movieName -> showTimes}
+        availableSeats  # Dictionary {movieName -> List of seats}
+        tickets         # List of Ticket objects
+
+    CONSTRUCTOR(theatreName)
+        SET this.theatreName = theatreName
+        INITIALIZE movieSchedule, availableSeats, tickets as empty
+    END CONSTRUCTOR
+
+    METHOD addMovie(movieName, showTime, seatList)
+        movieSchedule[movieName] = showTime
+        availableSeats[movieName] = seatList
+    END METHOD
+
+    METHOD issueTicket(movieName, seatNumber, price)
+        IF seatNumber IN availableSeats[movieName] THEN
+            REMOVE seatNumber FROM availableSeats[movieName]
+            newTicket = Ticket(movieName, seatNumber, price)
+            ADD newTicket TO tickets
+            PRINT "Ticket issued: " + newTicket.getDetails()
+            RETURN newTicket
+        ELSE
+            PRINT "Seat not available."
+            RETURN NULL
+        ENDIF
+    END METHOD
+
+    METHOD cancelTicket(ticket)
+        ticket.cancel()
+        IF ticket IS NOT NULL AND ticket.isBooked == FALSE THEN
+            ADD ticket.seatNumber TO availableSeats[ticket.movieName]
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS Customer
+    PRIVATE ATTRIBUTES:
+        name
+        bookedTickets  # List of Ticket objects
+
+    CONSTRUCTOR(name)
+        SET this.name = name
+        INITIALIZE bookedTickets as empty
+    END CONSTRUCTOR
+
+    METHOD browseMovies(theatre)
+        PRINT "Movies available at " + theatre.theatreName
+        FOR EACH movie IN theatre.movieSchedule
+            PRINT movie + " at " + theatre.movieSchedule[movie]
+        END FOR
+    END METHOD
+
+    METHOD bookTicket(theatre, movieName, seatNumber, price)
+        ticket = theatre.issueTicket(movieName, seatNumber, price)
+        IF ticket IS NOT NULL THEN
+            ADD ticket TO bookedTickets
+            PRINT name + " successfully booked: " + ticket.getDetails()
+        ENDIF
+    END METHOD
+
+    METHOD cancelTicket(theatre, ticket)
+        IF ticket IN bookedTickets THEN
+            theatre.cancelTicket(ticket)
+            REMOVE ticket FROM bookedTickets
+            PRINT name + " cancelled ticket for " + ticket.movieName
+        ELSE
+            PRINT "Ticket not found in customer's bookings."
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS MAIN
+    theatre1 = Theatre("PVR Cinema")
+    theatre1.addMovie("Avengers: Endgame", "6 PM", ["A10", "A11", "A12", "A13"])
+
+    customer1 = Customer("Ravi")
+    customer1.browseMovies(theatre1)
+
+    PRINT "--- Booking Ticket ---"
+    ticket1 = customer1.bookTicket(theatre1, "Avengers: Endgame", "A12", 300)
+
+    PRINT "--- Cancelling Ticket ---"
+    customer1.cancelTicket(theatre1, ticket1)
+END CLASS
