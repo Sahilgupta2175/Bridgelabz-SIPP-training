@@ -1,0 +1,9 @@
+Start
+Input: Maze grid with start and end points
+Define recursive function solveMaze(x, y)
+If (x, y) is the goal -> return true
+Mark current cell as visited
+Move in possible directions (up, down, left, right) recursively
+If path found -> return true
+If no path -> backtrack
+End
