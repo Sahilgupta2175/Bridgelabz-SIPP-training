@@ -1,0 +1,34 @@
+CLASS Room
+    ATTRIBUTES:
+        roomNumber
+        customerName
+        daysStayed
+
+    METHOD calculateBill()
+        RETURN 0
+    END METHOD
+END CLASS
+
+CLASS DeluxeRoom EXTENDS Room
+    METHOD calculateBill()
+        RETURN daysStayed * 3000
+    END METHOD
+END CLASS
+
+CLASS SuiteRoom EXTENDS Room
+    METHOD calculateBill()
+        RETURN daysStayed * 5000
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    r1 = DeluxeRoom()
+    r1.customerName = "Ravi"
+    r1.daysStayed = 3
+    PRINT "Bill for " + r1.customerName + " = ₹" + r1.calculateBill()
+
+    r2 = SuiteRoom()
+    r2.customerName = "Anita"
+    r2.daysStayed = 2
+    PRINT "Bill for " + r2.customerName + " = ₹" + r2.calculateBill()
+END CLASS
