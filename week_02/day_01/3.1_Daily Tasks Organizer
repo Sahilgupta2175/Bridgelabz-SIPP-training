@@ -1,0 +1,44 @@
+CLASS DailyTasksOrganizer
+    ATTRIBUTES:
+        tasks = LinkedHashMap<Integer, String>
+        taskCounter = 0
+
+    METHOD addTask(taskDescription)
+        taskCounter = taskCounter + 1
+        tasks.put(taskCounter, taskDescription)
+        PRINT "Task " + taskCounter + " added: " + taskDescription
+    END METHOD
+
+    METHOD removeTask(taskId)
+        IF tasks.containsKey(taskId) THEN
+            tasks.remove(taskId)
+            PRINT "Task " + taskId + " removed."
+        ELSE
+            PRINT "Task ID not found."
+        ENDIF
+    END METHOD
+
+    METHOD viewTasks()
+        PRINT "Pending Tasks in order:"
+        FOR EACH entry IN tasks
+            PRINT entry.key + " → " + entry.value
+        END FOR
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    organizer = DailyTasksOrganizer()
+
+    # Morning tasks
+    organizer.addTask("Check emails")
+    organizer.addTask("Prepare sales report")
+    organizer.addTask("Call client")
+
+    organizer.viewTasks()
+
+    # Midday removal
+    organizer.removeTask(2)
+
+    # View remaining tasks
+    organizer.viewTasks()
+END CLASS
