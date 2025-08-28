@@ -1,0 +1,27 @@
+Start
+Initialize normalQueue as empty Queue
+Initialize emergencyQueue as empty Queue
+
+Function addCustomer(name, priority)
+    If priority == "emergency"
+        Enqueue name into emergencyQueue
+    Else
+        Enqueue name into normalQueue
+End function
+
+Function serveCustomer()
+    If emergencyQueue is not empty
+        Dequeue and print customer from emergencyQueue
+    Else if normalQueue is not empty
+        Dequeue and print customer from normalQueue
+    Else
+        Print "No customers waiting"
+End function
+
+Main
+    addCustomer("John", "normal")
+    addCustomer("Jane", "emergency")
+    addCustomer("Mike", "normal")
+    serveCustomer()
+    serveCustomer()
+End
