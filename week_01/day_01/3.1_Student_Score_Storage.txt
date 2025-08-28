@@ -1,0 +1,18 @@
+Start
+Initialize scores as empty HashMap<String, Integer>
+
+Function addScore(name, marks)
+    scores[name] = marks
+End function
+
+Function getTopScorer()
+    Find entry with maximum value in scores
+    Return name and marks
+End function
+
+Main
+    addScore("Alice", 92)
+    addScore("Bob", 85)
+    addScore("Charlie", 97)
+    Print getTopScorer()
+End
