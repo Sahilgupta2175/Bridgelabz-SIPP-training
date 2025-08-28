@@ -1,0 +1,12 @@
+Start
+Input: Account details, account type (Saving, Current), transaction request
+Create base class Account with attributes: accountNumber, balance
+Create subclasses Saving and Current
+Override withdrawal rules in each subclass
+If transaction is withdrawal
+    Check withdrawal rules based on account type
+    If allowed, deduct amount from balance
+Else if deposit
+    Add amount to balance
+Display updated balance
+End
