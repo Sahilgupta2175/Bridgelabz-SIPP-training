@@ -1,0 +1,17 @@
+Start
+1. Define TrieNode with:
+   - children (Map<char, TrieNode>)
+   - isEndOfWord flag
+   - popularity score
+2. Insert(word):
+   - Traverse Trie, insert characters if missing.
+   - Mark last node as end of word.
+3. Search(prefix):
+   - Traverse Trie until end of prefix.
+   - From this node, collect all words recursively.
+   - Sort suggestions by popularity and return top N matches.
+4. Example:
+   - Insert: "pizza hut", "pizza point", "pita bread", "pizzeria"
+   - Search("pi") → ["pizza hut", "pizza point", "pita bread"]
+   - If "pita bread" has higher popularity, it moves up in results.
+End
