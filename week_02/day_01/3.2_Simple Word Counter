@@ -1,0 +1,43 @@
+CLASS WordCounter
+    METHOD countWords(paragraph)
+        # Step 1: Normalize text
+        text = paragraph.toLowerCase()
+        text = removePunctuation(text)
+
+        # Step 2: Split words
+        words = text.split(" ")
+
+        # Step 3: Count frequencies using Map
+        wordMap = Map<String, Integer>
+        FOR EACH word IN words
+            IF wordMap.containsKey(word) THEN
+                wordMap.put(word, wordMap.get(word) + 1)
+            ELSE
+                wordMap.put(word, 1)
+            ENDIF
+        END FOR
+
+        # Step 4: Sort by frequency (Streams logic)
+        sortedWords = wordMap.entries
+                            .stream()
+                            .sorted(by value DESC, then key ASC)
+
+        # Step 5: Print results
+        PRINT "Word Frequency Analysis:"
+        FOR EACH entry IN sortedWords
+            PRINT entry.key + " → " + entry.value
+        END FOR
+    END METHOD
+
+    METHOD removePunctuation(text)
+        RETURN text.replaceAll("[^a-z ]", "")
+    END METHOD
+END CLASS
+
+
+MAIN
+    paragraph = "The news today is about the rise in technology trends."
+
+    counter = WordCounter()
+    counter.countWords(paragraph)
+END
