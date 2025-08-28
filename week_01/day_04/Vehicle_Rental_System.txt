@@ -1,0 +1,10 @@
+Start
+Define abstract class Vehicle with attributes: model, rentPrice
+Define interface Rentable with method rent()
+Implement subclasses Car, Bike, Truck extending Vehicle and implementing Rentable
+Create VehicleFactory to return vehicle objects based on type
+Input: vehicleType, rentalDetails
+Use VehicleFactory to create the required vehicle
+Call rent() method
+Display rental confirmation
+End
