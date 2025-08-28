@@ -1,0 +1,13 @@
+Start
+1. Initialize a Queue with active servers (S1, S2, S3).
+2. For each incoming request:
+   - Assign request to server at front of queue.
+   - Move that server to the back of the queue.
+3. Support dynamic server management:
+   - Add server → enqueue it.
+   - Remove server → dequeue it if present.
+4. Example:
+   - R1 → S1, R2 → S2, R3 → S3
+   - Add S4 → R4 → S1, R5 → S2
+   - Remove S2 → R6 → S3
+End
