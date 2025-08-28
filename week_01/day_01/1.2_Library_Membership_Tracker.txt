@@ -1,0 +1,21 @@
+Start
+Define class Member
+    Attributes: name, ID, membershipDate
+    Constructor(name, ID, membershipDate)
+        Set this.name = name
+        Set this.ID = ID
+        Set this.membershipDate = membershipDate
+    Method isMembershipValid(currentDate)
+        If (currentDate - membershipDate) <= 365 days
+            Return true
+        Else
+            Return false
+End class
+
+Main
+    Create Member("Alice", 101, "2024-08-10")
+    If isMembershipValid("2025-08-12")
+        Print "Membership valid"
+    Else
+        Print "Membership expired"
+End
