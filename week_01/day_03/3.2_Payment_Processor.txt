@@ -1,0 +1,6 @@
+Start
+Generic class Transaction<T>
+Create Transaction<UPI>, Transaction<Card>, Transaction<NetBanking>
+Ensure type safety for payment processing
+Process payment and confirm success
+End
