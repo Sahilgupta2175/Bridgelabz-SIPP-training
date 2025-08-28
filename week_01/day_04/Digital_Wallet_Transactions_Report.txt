@@ -1,0 +1,7 @@
+Start
+Input: List of transactions with merchant, month, and amount
+Use Streams to group transactions by merchant
+Within each merchant group, group again by month
+For each group, calculate total amount and transaction count
+Display summary report with merchant, month, total amount, and transaction count
+End
