@@ -1,0 +1,35 @@
+CLASS SurveyResponse
+    ATTRIBUTES:
+        restaurantName
+        rating
+END CLASS
+
+CLASS SurveyAnalyzer
+    METHOD generateReport(responses)
+        map = Map<String, List<Integer>>()
+
+        FOR EACH response IN responses
+            map[response.restaurantName].add(response.rating)
+        ENDFOR
+
+        FOR EACH restaurant IN map
+            avg = average(map[restaurant])
+            PRINT restaurant + " → " + avg
+        ENDFOR
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    responses = [
+        SurveyResponse("PizzaHut", 4),
+        SurveyResponse("PizzaHut", 5),
+        SurveyResponse("KFC", 3),
+        SurveyResponse("KFC", 4),
+        SurveyResponse("Subway", 5),
+        SurveyResponse("Subway", 4),
+        SurveyResponse("Subway", 5)
+    ]
+
+    analyzer = SurveyAnalyzer()
+    analyzer.generateReport(responses)
+END CLASS
