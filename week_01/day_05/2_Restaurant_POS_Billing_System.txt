@@ -1,0 +1,20 @@
+Start
+1. Define abstract TaxCalculator with method calculateTax(amount).
+   Subclasses:
+   - FoodTax (5% GST)
+   - BeverageTax (12% GST)
+   - ImportedTax (5% GST + Customs duty)
+2. Define interface DiscountPolicy with method applyDiscount(amount).
+   Implementations:
+   - NoDiscount
+   - FlatDiscount
+   - PercentageDiscount
+3. Billing Process:
+   - For each item, apply the respective TaxCalculator.
+   - After total, apply the selected DiscountPolicy.
+4. Example:
+   - Order: Paneer Tikka, Coke, Imported Cheese
+   - Apply correct taxes
+   - Final bill: apply 10% discount
+5. New tax/discount (LuxuryTax, Buy 1 Get 1) can be added without modifying existing billing code.
+End
