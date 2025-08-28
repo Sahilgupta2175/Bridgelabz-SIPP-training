@@ -1,0 +1,22 @@
+CLASS Doctor
+    ATTRIBUTES:
+        name
+        specialization
+        experienceYears
+END CLASS
+
+CLASS Hospital
+    ATTRIBUTES:
+        Map<String, List<Doctor>> departments
+
+    METHOD addDoctor(department, doctor)
+        departments[department].add(doctor)
+    END METHOD
+
+    METHOD getDoctors(department)
+        PRINT "Doctors in " + department + ":"
+        FOR EACH d IN departments[department]
+            PRINT d.name + " - " + d.specialization + " (" + d.experienceYears + " years)"
+        ENDFOR
+    END METHOD
+END CLASS
