@@ -1,0 +1,5 @@
+Start
+Input: List of books with publication year and rating
+Use Stream filter to select books where year > 2015 and rating > 4.5
+Collect and display filtered books
+End
