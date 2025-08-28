@@ -1,0 +1,19 @@
+CLASS WordCounter
+    METHOD countWords(text)
+        map = Map<String, Integer>()
+        words = split(text)
+
+        FOR EACH word IN words
+            word = lowercase(removePunctuation(word))
+            map[word] = map.getOrDefault(word, 0) + 1
+        ENDFOR
+
+        PRINT map
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    text = "Sports bring people together. Sports inspire teamwork. Sports create leaders."
+    wc = WordCounter()
+    wc.countWords(text)
+END CLASS
