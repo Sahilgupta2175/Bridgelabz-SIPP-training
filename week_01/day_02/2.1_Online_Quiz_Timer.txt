@@ -1,0 +1,14 @@
+Start
+Initialize circularArray as Array of integers [time slots for each question]
+Initialize totalQuestions = length of circularArray
+Initialize index = 0
+
+While quiz not finished
+    Print "Time left for Question " + (index + 1) + ": " + circularArray[index] + " seconds"
+    If circularArray[index] <= 5
+        Print "Warning: Time running out!"
+    Decrement circularArray[index] by 1
+    If circularArray[index] == 0
+        Move to next question: index = (index + 1) % totalQuestions
+End While
+End
