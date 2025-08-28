@@ -1,0 +1,26 @@
+Start
+Define class Item
+    Attributes: name, price
+    Constructor(name, price)
+        Set values
+End class
+
+Initialize cart as List<Item>
+
+Function addItem(name, price)
+    Create new Item(name, price)
+    Add to cart
+End function
+
+Generic Function calculateTotalPrice(List<T extends Item>)
+    total = 0
+    For each item in list
+        total += item.price
+    Return total
+End function
+
+Main
+    addItem("Laptop", 50000)
+    addItem("Mouse", 800)
+    Print "Total Price: " + calculateTotalPrice(cart)
+End
