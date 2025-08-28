@@ -1,0 +1,8 @@
+Start
+Represent city zones as Graph with nodes (zones) and edges (connections)
+Assign crime data to each zone
+Use DFS to traverse graph
+Track and mark zones with crime rate above threshold
+Highlight these zones as high-risk areas
+Display heatmap of city with high-risk areas
+End
