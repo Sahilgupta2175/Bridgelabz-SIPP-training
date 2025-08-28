@@ -1,0 +1,53 @@
+CLASS Transaction<T>
+    ATTRIBUTES:
+        paymentType
+
+    METHOD processPayment()
+        paymentType.process()
+    END METHOD
+END CLASS
+
+CLASS UPI
+    ATTRIBUTES:
+        upiId
+        amount
+        merchantName
+
+    METHOD process()
+        PRINT "Payment of ₹" + amount + " via UPI successful for " + merchantName
+    END METHOD
+END CLASS
+
+CLASS Card
+    ATTRIBUTES:
+        cardNumber
+        cvv
+        expiryDate
+        amount
+
+    METHOD process()
+        PRINT "Payment of ₹" + amount + " via Card ending " + last4(cardNumber) + " successful"
+    END METHOD
+END CLASS
+
+CLASS NetBanking
+    ATTRIBUTES:
+        bankName
+        accountNumber
+        amount
+
+    METHOD process()
+        PRINT "Payment of ₹" + amount + " via NetBanking (" + bankName + ") successful"
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    t1 = Transaction<UPI>(UPI("user@upi", 1200, "Amazon"))
+    t1.processPayment()
+
+    t2 = Transaction<Card>(Card("1234-5678-9876-5432", "123", "12/27", 5000))
+    t2.processPayment()
+
+    t3 = Transaction<NetBanking>(NetBanking("HDFC", "00112233", 8000))
+    t3.processPayment()
+END CLASS
