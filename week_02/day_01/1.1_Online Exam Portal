@@ -1,0 +1,76 @@
+CLASS User
+    ATTRIBUTES:
+        username
+        password
+
+    METHOD login(inputUsername, inputPassword)
+        IF inputUsername == username AND inputPassword == password THEN
+            RETURN TRUE
+        ELSE
+            RETURN FALSE
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS Student EXTENDS User
+    ATTRIBUTES:
+        enrolledCourse
+        isRegistered
+
+    METHOD login(inputUsername, inputPassword)
+        IF super.login(inputUsername, inputPassword) == TRUE THEN
+            IF isRegistered == TRUE AND enrolledCourse IS NOT EMPTY THEN
+                PRINT "Student login successful. Showing available exams..."
+                RETURN TRUE
+            ELSE
+                PRINT "Login failed: Student not registered or not enrolled in a course."
+                RETURN FALSE
+            ENDIF
+        ELSE
+            PRINT "Login failed: Invalid student credentials."
+            RETURN FALSE
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS Admin EXTENDS User
+    ATTRIBUTES:
+        hasAdminPrivileges
+
+    METHOD login(inputUsername, inputPassword)
+        IF super.login(inputUsername, inputPassword) == TRUE THEN
+            IF hasAdminPrivileges == TRUE THEN
+                PRINT "Admin login successful. Access exam management tools..."
+                RETURN TRUE
+            ELSE
+                PRINT "Login failed: No admin privileges."
+                RETURN FALSE
+            ENDIF
+        ELSE
+            PRINT "Login failed: Invalid admin credentials."
+            RETURN FALSE
+        ENDIF
+    END METHOD
+END CLASS
+
+
+CLASS MAIN
+    student1 = Student()
+    student1.username = "john123"
+    student1.password = "pass123"
+    student1.isRegistered = TRUE
+    student1.enrolledCourse = "Computer Science"
+
+    admin1 = Admin()
+    admin1.username = "admin01"
+    admin1.password = "admin@123"
+    admin1.hasAdminPrivileges = TRUE
+
+    PRINT "--- Student Login Attempt ---"
+    student1.login("john123", "pass123")
+
+    PRINT "--- Admin Login Attempt ---"
+    admin1.login("admin01", "admin@123")
+END CLASS
