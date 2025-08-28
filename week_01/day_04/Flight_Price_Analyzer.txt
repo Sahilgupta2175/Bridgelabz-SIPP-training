@@ -1,0 +1,7 @@
+Start
+Input: List of flights with price and duration
+Define CustomComparator to compare flights by price, then by duration
+Implement MergeSort algorithm using CustomComparator
+Sort the flights
+Display sorted flight list
+End
