@@ -1,0 +1,26 @@
+CLASS ProductSearch
+    METHOD binarySearch(products, target)
+        low = 0
+        high = length(products) - 1
+        WHILE low <= high
+            mid = (low + high) / 2
+            IF products[mid] == target THEN
+                PRINT target + " is available."
+                RETURN TRUE
+            ELSE IF products[mid] < target THEN
+                low = mid + 1
+            ELSE
+                high = mid - 1
+            ENDIF
+        ENDWHILE
+        PRINT target + " not found."
+        RETURN FALSE
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    catalog = ["AirPods", "Backpack", "Camera", "Laptop", "Shoes", "Smartphone", "Watch"]
+    ps = ProductSearch()
+    ps.binarySearch(catalog, "Laptop")
+    ps.binarySearch(catalog, "Headphones")
+END CLASS
