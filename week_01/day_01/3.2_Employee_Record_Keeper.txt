@@ -1,0 +1,25 @@
+Start
+Define class Employee
+    Attributes: name, department
+    Constructor(name, department)
+        Set this.name = name
+        Set this.department = department
+End class
+
+Initialize employees as empty ArrayList<Employee>
+
+Function addEmployee(name, department)
+    Create new Employee(name, department)
+    Add to employees list
+End function
+
+Function filterByDepartment(dept)
+    Return list of employees where department == dept
+End function
+
+Main
+    addEmployee("Alice", "HR")
+    addEmployee("Bob", "IT")
+    addEmployee("Charlie", "IT")
+    Print filterByDepartment("IT")
+End
