@@ -1,0 +1,8 @@
+Start
+Input: Patient details with unique ID
+Create HashMap<PatientID, Patient>
+Add new patient records
+Retrieve record using patient ID
+Update record if needed
+Delete record if required
+End
