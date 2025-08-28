@@ -1,0 +1,67 @@
+CLASS Vehicle
+    ATTRIBUTES:
+        vehicleNumber
+        entryTime
+
+    METHOD calculateFee(exitTime)
+        RETURN 0   
+    END METHOD
+END CLASS
+
+CLASS Car EXTENDS Vehicle
+    METHOD calculateFee(exitTime)
+        duration = exitTime - entryTime
+        IF duration <= 1 THEN
+            fee = 50
+        ELSE
+            fee = 50 + (duration - 1) * 30
+        ENDIF
+        PRINT "Car " + vehicleNumber + " Fee: ₹" + fee
+        RETURN fee
+    END METHOD
+END CLASS
+
+CLASS Bike EXTENDS Vehicle
+    METHOD calculateFee(exitTime)
+        duration = exitTime - entryTime
+        IF duration <= 1 THEN
+            fee = 20
+        ELSE
+            fee = 20 + (duration - 1) * 10
+        ENDIF
+        PRINT "Bike " + vehicleNumber + " Fee: ₹" + fee
+        RETURN fee
+    END METHOD
+END CLASS
+
+CLASS Truck EXTENDS Vehicle
+    METHOD calculateFee(exitTime)
+        duration = exitTime - entryTime
+        IF duration <= 1 THEN
+            fee = 100
+        ELSE
+            fee = 100 + (duration - 1) * 50
+        ENDIF
+        PRINT "Truck " + vehicleNumber + " Fee: ₹" + fee
+        RETURN fee
+    END METHOD
+END CLASS
+
+CLASS MAIN
+    car1 = Car()
+    car1.vehicleNumber = "KA05AB1234"
+    car1.entryTime = 10.0
+
+    bike1 = Bike()
+    bike1.vehicleNumber = "KA05XY7890"
+    bike1.entryTime = 11.25
+
+    truck1 = Truck()
+    truck1.vehicleNumber = "KA09TR5566"
+    truck1.entryTime = 9.5
+
+    PRINT "--- Evening Exit ---"
+    car1.calculateFee(13.5)   
+    bike1.calculateFee(12.0)  
+    truck1.calculateFee(14.0) 
+END CLASS
