@@ -1,0 +1,28 @@
+Start
+Define class Doctor
+    Attributes: name, specialization
+    Constructor(name, specialization)
+        Set values
+End class
+
+Initialize departmentMap as Map<String, List<Doctor>>
+
+Function addDoctor(department, doctor)
+    If department not in departmentMap
+        departmentMap[department] = new empty list
+    Add doctor to departmentMap[department]
+End function
+
+Function filterDoctorsBySpecialization(specialization)
+    For each department in departmentMap
+        For each doctor in department list
+            If doctor.specialization == specialization
+                Print doctor.name + " in department " + department
+End function
+
+Main
+    addDoctor("Cardiology", Doctor("Dr. Smith", "Heart Specialist"))
+    addDoctor("Neurology", Doctor("Dr. Alice", "Brain Specialist"))
+    addDoctor("Cardiology", Doctor("Dr. John", "Heart Specialist"))
+    filterDoctorsBySpecialization("Heart Specialist")
+End
