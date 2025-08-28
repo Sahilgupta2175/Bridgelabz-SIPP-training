@@ -1,0 +1,12 @@
+Start
+1. Data Structure:
+   Map<Zone, Map<Day, List<Reading>>>
+   - Zone → Day → List of meter readings
+2. For each Zone and Day:
+   - Aggregate daily readings.
+   - Find maximum (peak load).
+3. Example:
+   - Zone-A, Day-2025-08-01 → [120, 90, 200, 150] → Peak = 200
+   - Zone-B, Day-2025-08-01 → [300, 350, 250] → Peak = 350
+4. Generate report: Zone-wise, Day-wise peak load.
+End
